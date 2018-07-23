@@ -1,3 +1,4 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -9,8 +10,10 @@ public class App {
     System.setProperty("webdriver.gecko.driver","/home/norbi/Documents/geckodriver");
     WebDriver webDriver = new FirefoxDriver();
 
-    webDriver.get(BASE_URL);
     webDriver.manage().window().fullscreen();
 
+    webDriver.get(BASE_URL);
+
+    webDriver.findElement(By.className("closebutton_closeButton--3abym")).click();
   }
 }
