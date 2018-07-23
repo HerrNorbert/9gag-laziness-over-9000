@@ -1,7 +1,5 @@
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
@@ -26,7 +24,7 @@ public class App {
         webDriver.findElement(By.tagName("body")).sendKeys("j");
         if(webDriver.findElement(By.className("main-wrap")).findElements(By.className("gif-post")) != null){
           delay = 15;
-        } 
+        }
         TimeUnit.SECONDS.sleep(delay);
       }
     } catch (InterruptedException e) {
